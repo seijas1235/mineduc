@@ -2,12 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Folder;
 use Illuminate\Http\Request;
 
 class FolderController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -16,6 +29,8 @@ class FolderController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -24,6 +39,9 @@ class FolderController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -32,32 +50,45 @@ class FolderController extends Controller
 
     /**
      * Display the specified resource.
+     *
+     * @param  \App\Models\Folder  $folder
+     * @return \Illuminate\Http\Response
      */
-    public function show(string $id)
+    public function show(Folder $folder)
     {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Folder  $folder
+     * @return \Illuminate\Http\Response
      */
-    public function edit(string $id)
+    public function edit(Folder $folder)
     {
         //
     }
 
     /**
      * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Folder  $folder
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Folder $folder)
     {
         //
     }
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Folder  $folder
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(string $id)
+    public function destroy(Folder $folder)
     {
         //
     }

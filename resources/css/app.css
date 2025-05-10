@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Metronic components */
+@import '../assets/css/components/index.css';
+@import '../assets/css/components/menu.css';
+@import '../assets/css/components/container.css';
+@import '../assets/css/components/scrollable.css';
+@import '../assets/css/components/image-input.css';
+@import '../assets/css/components/rating.css';
+@import '../assets/css/components/range.css';
+@import '../assets/css/components/apexcharts.css';
+@import '../assets/css/components/leaflet.css';
