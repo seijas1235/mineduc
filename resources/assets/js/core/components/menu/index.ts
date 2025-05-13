@@ -1,0 +1,1 @@
+export { KTMenu } from './menu-simplified';
